@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<openerp>
+   <data>
+
+     <record model="ir.ui.view" id="zay_crm_receitaws_form">
+         <field name="name">zay.crm.receitaws.form</field>
+         <field name="model">crm.lead</field>
+         <field name="inherit_id" ref="crm.crm_case_form_view_oppor"/>
+         <field name="arch" type="xml">
+
+           <!-- Ajusta partner_id e cnpj -->
+           <field name="cnpj" position="replace" />
+           <field name="partner_id" position="after" >
+                <label for="cnpj"/>
+             		<div>
+                   <field name="cnpj" />
+                   <button name="cnpj_search" string="Consultar CNPJ" type="object" class="oe_link oe_inline" /> |
+                   <button name="partner_add" string="Adiciona cliente" type="object" class="oe_link oe_inline" />
+                   <br/><br/>
+                </div>
+           </field>
+
+           <!-- Adiciona outras informacoes da empresa -->
+           <field name="fax" position="after" >
+               <field name="partner_others_inf" />
+           </field>
+
+
+         </field>
+     </record>
+   </data>
+</openerp>
