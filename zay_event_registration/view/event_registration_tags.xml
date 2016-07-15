@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='utf-8'?>
+<openerp>
+    <data>
+
+      <!-- Exemplo de FORM -->
+      <record id='zay_event_registration_tags_form' model='ir.ui.view'>
+          <field name='name'>Event registration tags</field>
+          <field name='model'>zay.event.registration.tags</field>
+          <field name='type'>form</field>
+          <field name='arch' type='xml'>
+          <form string='sample crud'>
+            <group>
+                <field name='name'/>
+                <field name='description'/>
+            </group>
+          </form>
+          </field>
+      </record>
+
+      <!-- Exemplo de TREE -->
+      <record id='zay_event_registration_tags_tree' model='ir.ui.view'>
+          <field name='name'>Event registration tags tree</field>
+          <field name='model'>zay.event.registration.tags</field>
+          <field name='type'>tree</field>
+          <field name='arch' type='xml'>
+          <tree string='sample tree'>
+            <field name='name'/>
+            <field name='description'/>
+          </tree>
+          </field>
+      </record>
+
+      <!-- Exemplo de ACTION -->
+      <record id='zay_event_registration_tags_action' model='ir.actions.act_window'>
+          <field name='name'>Event registration tags action</field>
+          <field name='res_model'>zay.event.registration.tags</field>
+          <field name='view_type'>form</field>
+          <field name='view_mode'>tree,form</field>
+      </record>
+
+
+     <!-- Menu para o sistema de CRUD exemplo -->
+     <menuitem name='Tags' id='zay_event_registration_tags_menu' groups="event.group_event_user"
+       parent='event.event_main_menu' action='zay_event_registration_tags_action'/>
+
+  </data>
+</openerp>

@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<openerp>
+   <data>
+
+     <record model="ir.ui.view" id="zay_event_registration_form">
+         <field name="name">zay.event.registration.form</field>
+         <field name="model">event.registration</field>
+         <field name="inherit_id" ref="event.view_event_registration_form"/>
+         <field name="arch" type="xml">
+             <!-- Ajusta .... -->
+             <field name="email" position="after" >
+                 <field name="external_number" />
+                 <field name="campaign_others_ref" />
+                 <field name="notes" />
+             </field>
+
+         </field>
+     </record>
+   </data>
+</openerp>
